@@ -77,6 +77,9 @@ export const Game = () => {
                             <Button label="?" disabled={disabledButton()} onClick={() => toggleHelp()}/>
                         </div>
                         <Highscore highScore={highScore}/>
+                        <a className="website" href="https://www.adimb.dev">
+                            🌐 adimb.dev
+                        </a>
                     </section>
                 </>
             }
