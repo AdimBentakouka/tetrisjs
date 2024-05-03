@@ -1,0 +1,32 @@
+/**
+    Variable de couleurs
+ */
+
+:root {
+    --body-bg: #1A1B26;
+
+    --game-border: #2A2D40;
+    --game-bg: #1E202E;
+
+    --cell-border: #414868;
+    --grid-bg: #414868;
+
+    --section-border: #414868;
+
+    --font-color: #9AA5CE;
+    --font-color-secondary: #fff;
+
+    --btn-primary: #414868;
+    --btn-secondary: #24283B;
+    --btn-secondary-border: #414868;
+
+    --btn-font-color: #fff;
+
+    --cyan: #73daca;
+    --yellow: #e0af68;
+    --red: #f7768e;
+    --green: #9ece6a;
+    --orange: #ff9e64;
+    --blue: #7aa2f7;
+    --purple: #bb9af7;
+}

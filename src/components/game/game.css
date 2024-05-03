@@ -1,0 +1,43 @@
+.game{
+    position: relative;
+    margin: 0 auto;
+    width: 815px;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+    align-items: start;
+
+    background-color: var(--game-bg);
+
+    border-radius: 10px;
+    border: solid 2px var(--game-border);
+}
+
+.game section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.group-btn{
+    width: 189px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    position: absolute;
+
+    user-select: none;
+
+    font-size: 112px;
+    color: var(--font-color-secondary);
+
+
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,42 @@
+.btn {
+    height: 40px;
+    min-width: 40px;
+
+    font-family: "Passion One", sans-serif;
+    font-size: 20px;
+    color: var(--btn-font-color);
+
+    border-radius: 10px;
+}
+
+
+
+.btn-primary{
+    background-color: var(--btn-primary);
+    width: 140px;
+    border: none;
+
+    transition: all 200ms ease-in-out;
+}
+
+.btn-primary:hover{
+    background-color: var(--btn-secondary);
+    cursor: pointer;
+}
+
+.btn-secondary{
+    min-width: 40px;
+    border: 2px solid var(--btn-secondary-border);
+    background-color: var(--btn-secondary);
+
+    transition: all 200ms ease-in-out;
+}
+
+.btn:disabled.btn-primary:hover, .btn:disabled.btn-secondary:hover{
+    cursor: not-allowed;
+}
+
+.btn-secondary:hover{
+    background-color: var(--btn-primary);
+    cursor: pointer;
+}

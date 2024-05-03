@@ -1,0 +1,35 @@
+body {
+  background-color: var(--body-bg);
+
+  font-family: "Passion One", sans-serif;
+
+  color: var(--font-color);
+}
+
+
+main {
+  padding: 25px 50px;
+}
+
+/**
+    Link to website
+ */
+
+.website {
+  font-size: 20px;
+  line-height: 1;
+
+  font-family: "Poppins Bold", sans-serif;
+  color: inherit;
+  text-decoration: none;
+}
+
+.website span {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.website:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,46 @@
+.help {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--game-bg);
+    height: 724px;
+
+    width: 350px;
+
+    text-align: center;
+}
+
+.help h1{
+    font-size: 46px;
+    letter-spacing: 2px;
+}
+
+.help .btn {
+    width: 350px;
+    margin: 0 auto;
+
+}
+
+.controls {
+    padding: 0;
+    list-style: none;
+
+}
+
+.controls li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 26px;
+
+    padding: 5px;
+}
+
+.controls span {
+    border-radius: 5px;
+    border: 2px solid var(--game-border);
+    padding: 5px 15px;
+}
+
+

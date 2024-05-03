@@ -1,0 +1,11 @@
+.board {
+    width: 420px;
+    height: 720px;
+
+    padding: 1px;
+
+    border-radius: 5px;
+    border: 2px solid var(--game-border);
+
+    background-color: var(--game-border);
+}

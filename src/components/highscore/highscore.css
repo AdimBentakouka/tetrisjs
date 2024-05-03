@@ -1,0 +1,25 @@
+.highscore {
+    width: 185px;
+
+    border: 2px solid var(--game-border);
+    border-radius: 10px;
+
+    background-color: var(--body-bg);
+}
+
+.highscore p{
+    margin: 10px 0;
+
+    text-align: center;
+    font-size: 24px;
+}
+
+.highscore ul {
+    padding: 0;
+}
+
+.highscore li {
+    text-align: center;
+    font-size: 20px;
+    list-style: none;
+}

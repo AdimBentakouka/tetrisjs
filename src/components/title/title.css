@@ -1,0 +1,40 @@
+.title {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title h1 {
+    font-family: "Passion One", sans-serif;
+    font-size: 96px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    margin: 30px 0;
+}
+
+.title span:nth-of-type(6n + 1) {
+    color: var(--red);
+}
+
+.title span:nth-of-type(6n + 2) {
+    color: var(--orange);
+}
+
+.title span:nth-of-type(6n + 3) {
+    color: var(--yellow);
+}
+
+.title span:nth-of-type(6n + 4) {
+    color: var(--green);
+}
+
+.title span:nth-of-type(6n + 5) {
+    color: var(--cyan);
+}
+
+.title span:nth-of-type(6n + 6) {
+    color: var(--purple);
+}

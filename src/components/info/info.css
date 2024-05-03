@@ -1,0 +1,20 @@
+.info {
+    width: 185px;
+    height: 40px;
+
+    border-radius: 10px;
+    border: 2px solid var(--game-border);
+
+    background-color: var(--body-bg);
+
+}
+
+.info p {
+    margin: 0;
+
+    font-family: "Passion One", sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0 15px;
+
+}

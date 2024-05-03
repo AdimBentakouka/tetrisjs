@@ -1,0 +1,26 @@
+.piece {
+    width: 185px;
+    height: 90px;
+
+    border-radius: 10px;
+    border: 2px solid var(--game-border);
+
+    background-color: var(--body-bg);
+
+}
+
+.piece p {
+    margin: 5px 0;
+    text-align: center;
+
+    font-family: "Passion One", sans-serif;
+    font-size: 24px;
+}
+
+.piece-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 42px;
+}
