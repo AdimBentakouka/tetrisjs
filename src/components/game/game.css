@@ -1,7 +1,6 @@
 .game{
     position: relative;
     margin: 0 auto;
-    width: 815px;
     padding: 15px 40px;
 
     display: flex;
@@ -42,6 +41,8 @@
 
     top: 50%;
     transform: translateY(-50%);
+
+    z-index: 1;
 }
 
 
