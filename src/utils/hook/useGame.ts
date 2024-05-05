@@ -62,7 +62,7 @@ export const useGame = (maxColumns: number, maxRows: number) => {
             piece: currentPiece!,
             positionPiece: {
                 x: positionPiece.x,
-                y: pressSpace ? getLastRow({grid: board, piece: currentPiece!, positionPiece}) : positionPiece.y
+                y: getLastRow({grid: board, piece: currentPiece!, positionPiece}) // Forcer à ce que la pièce soit le plus bas possible
             }
         });
 
