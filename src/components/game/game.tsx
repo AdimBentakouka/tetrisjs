@@ -11,6 +11,8 @@ import {Piece} from "../piece/piece";
 import "./game.css"
 
 
+const DELAY_START_GAME = 3;
+
 export const Game = () => {
     const [help, setHelp] = useState<boolean>(false);
     const {count, startCounter} = useDownCount();
@@ -67,13 +69,13 @@ export const Game = () => {
                         <div className="group-btn">
                             {["WAITING START", "GAME OVER"].includes(gameState) &&
                                 <Button label="Start Game" primary disabled={disabledButton()}
-                                        onClick={() => startCounter(() => newGame(), 5)
+                                        onClick={() => startCounter(() => newGame(), DELAY_START_GAME)
                                         }/>}
                             {gameState == "PLAYING" &&
                                 <Button label="Pause" disabled={disabledButton()} primary onClick={() => pauseGame()}/>}
                             {gameState == "PAUSED" &&
                                 <Button label="Resume" primary disabled={disabledButton()}
-                                        onClick={() => startCounter(() => resumeGame(), 5)}/>}
+                                        onClick={() => startCounter(() => resumeGame(), DELAY_START_GAME)}/>}
                             <Button label="?" disabled={disabledButton()} onClick={() => toggleHelp()}/>
                         </div>
                         <Highscore highScore={highScore}/>
