@@ -215,13 +215,6 @@ export const useGame = (maxColumns: number, maxRows: number) => {
     }, [board, canHold, commitGrid, currentPiece, currentPieceId, gameState, holdPieceId, nextPieceId, positionPiece])
 
 
-    // #TODO Temporaire
-    const setGameState = (newState: GameState) => {
-        setState((prevState) => ({
-            ...prevState, gameState: newState, highScore: newState === "GAME OVER" ? getHighScore() : prevState.highScore
-        }));
-    }
-
     // Démarrer une nouvelle partie
     const newGame = () => {
         const newGameState = initGameContext(maxColumns, maxRows);
