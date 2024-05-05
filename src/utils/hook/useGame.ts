@@ -97,7 +97,9 @@ export const useGame = (maxColumns: number, maxRows: number) => {
                 highScore: getHighScore(),
             }))
 
-        setState((c) => ({
+        }
+
+        return setState((c) => ({
             ...c,
             board: newGrid ? newGrid : _mergedGrid,
             positionPiece: newPosition,
@@ -157,9 +159,10 @@ export const useGame = (maxColumns: number, maxRows: number) => {
 
         const Controller = (event: KeyboardEvent) => {
             if (gameState === "PLAYING") {
+                event.preventDefault();
                 switch (event.key.toUpperCase()) {
                     case "ESCAPE":
-                        return setGameState("PAUSED");
+                        return pauseGame();
                     case "ARROWLEFT":
                         return setState((prevState) => ({
                             ...prevState,
@@ -198,7 +201,7 @@ export const useGame = (maxColumns: number, maxRows: number) => {
                     case "C":
                         return holdPiece();
                     case " ":
-                        return commitGrid(true);
+                        return commitGrid();
                 }
             }
         };
@@ -256,7 +259,7 @@ export const useGame = (maxColumns: number, maxRows: number) => {
         nextPiece: nextPieceId !== -1 ? getPieceId(nextPieceId) : undefined,
         highScore,
         newGame,
-        pauseGame: () => setGameState("PAUSED"),
-        resumeGame: () => setGameState("PLAYING"),
+        pauseGame,
+        resumeGame,
     }
 }
