@@ -54,7 +54,16 @@ export const useGame = (maxColumns: number, maxRows: number) => {
         highScore
     }, setState] = useState<GameContext>(initGameContext(maxColumns, maxRows));
 
-    const commitGrid = useCallback((pressSpace: boolean = false) => {
+    const pauseGame = () => setState((prevState) => ({
+        ...prevState,
+        gameState: "PAUSED"
+    }));
+    const resumeGame = () => setState((prevState) => ({
+        ...prevState,
+        gameState: "PLAYING"
+    }));
+
+    const commitGrid = useCallback(() => {
 
         const newPiece = getPieceId(nextPieceId);
         const _mergedGrid = mergedGrid({
@@ -73,18 +82,20 @@ export const useGame = (maxColumns: number, maxRows: number) => {
             x: newPiece[0].length + positionPiece.x > maxColumns ? maxColumns - newPiece[0].length : positionPiece.x
         };
 
-        //check si game over
-        if (isCollide({grid: _mergedGrid, piece: newPiece, positionPiece: newPosition})) {
-            setNewHighScore(score);
-            return setGameState("GAME OVER");
-        }
-
         let _level = level;
 
         if (rows >= level * 10 + 10) {
             _level++;
         }
 
+        //check si game over
+        if (isCollide({grid: _mergedGrid, piece: newPiece, positionPiece: newPosition})) {
+            setNewHighScore(score);
+            return setState((prevState) => ({
+                ...prevState,
+                gameState: "GAME OVER",
+                highScore: getHighScore(),
+            }))
 
         setState((c) => ({
             ...c,
